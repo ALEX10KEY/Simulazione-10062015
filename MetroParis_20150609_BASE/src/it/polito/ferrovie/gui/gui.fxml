@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane id="BorderPane" maxHeight="-1.0" maxWidth="-1.0" minHeight="-1.0" minWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" xmlns:fx="http://javafx.com/fxml">
+  <center>
+    <VBox prefHeight="-1.0" prefWidth="-1.0">
+      <children>
+        <FlowPane prefHeight="-1.0" prefWidth="-1.0">
+          <children>
+            <Label text="Stazione:">
+              <labelFor>
+                <ChoiceBox id="laStazione" fx:id="boxPartenza" minWidth="300.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ChoiceBox>
+              </labelFor>
+              <FlowPane.margin>
+                <Insets right="10.0" />
+              </FlowPane.margin>
+            </Label>
+            <fx:reference source="boxPartenza" />
+            <Button id="doCalcola" fx:id="btnCalcola" mnemonicParsing="false" text="Calcola">
+              <FlowPane.margin>
+                <Insets left="10.0" />
+              </FlowPane.margin>
+            </Button>
+          </children>
+        </FlowPane>
+        <TextArea id="elencoStazioni" fx:id="txtElencoStazioni" disable="false" editable="false" prefWidth="-1.0" text="Stazione Pinco (30 min)&#10;Stazione Pallino (28 min)&#10;Stazione Tizio (16 min)&#10;Stazione Caio (14 min)&#10;Stazione Sempronio (8 min)" wrapText="true">
+          <VBox.margin>
+            <Insets top="20.0" />
+          </VBox.margin>
+        </TextArea>
+      </children>
+    </VBox>
+  </center>
+  <top>
+    <Label alignment="CENTER_LEFT" contentDisplay="CENTER" disable="false" text="MetroParis - Calcolo distanze" textAlignment="CENTER" textFill="RED" BorderPane.alignment="CENTER">
+      <font>
+        <Font size="24.0" />
+      </font>
+      <BorderPane.margin>
+        <Insets bottom="10.0" />
+      </BorderPane.margin>
+    </Label>
+  </top>
+</BorderPane>
